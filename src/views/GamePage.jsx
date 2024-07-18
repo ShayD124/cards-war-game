@@ -79,16 +79,16 @@ export default function GamePage() {
   
   return (
     <div className="flex flex-col items-center p-4">
-    <div className="flex space-x-8 mb-8">
+      <div className="flex space-x-8 mb-8">
         <div className="flex flex-col items-center text-center">
             <h2 className="text-xl font-bold mb-4">Player's Card</h2>
             {player.cardDeck && <Cards value={player.cardDeck[index]} />}
-            <h2 className="text-lg mt-4">Player Points: {playerPoints}</h2>
+            <h2 className="text-lg mt-4">Player Points: <span className="inline-block min-w-[40px]">{playerPoints}</span></h2>
         </div>
         <div className="flex flex-col items-center text-center">
             <h2 className="text-xl font-bold mb-4">Computer's Card</h2>
             {computer.cardDeck && <Cards value={computer.cardDeck[index]} />}
-            <h2 className="text-lg mt-4">Computer Points: {computerPoints}</h2>
+            <h2 className="text-lg mt-4">Computer Points: <span className="inline-block min-w-[40px]">{computerPoints}</span></h2>
         </div>
     </div>
     <button
